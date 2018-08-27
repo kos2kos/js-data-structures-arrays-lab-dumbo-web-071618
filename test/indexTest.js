@@ -1,5 +1,17 @@
 const expect = chai.expect;
+const drivers = ["Milo", "Otis", "Garfield"];
 
+function destructivelyAppendDriver(name){
+  drivers.push(name);
+}
+
+function destructivelyPrependDriver(name){
+  drivers.shift(name);
+}
+
+function destructivelyRemoveLastDriver(){
+  drivers.pop();
+}
 describe('index.js', function () {
   describe('drivers', function () {
     it('is assigned an initial value of ["Milo", "Otis", "Garfield"]', function () {
